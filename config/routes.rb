@@ -3318,6 +3318,8 @@ Rails.application.routes.draw do
   # Let's serve pictures directly from the DB
   get '/pictures/:basename' => 'picture#show', :basename => /[\da-zA-Z]+\.[\da-zA-Z]+/
 
+  get '/welcome' => 'dashboard#login'
+
   get '/saml_login(/*path)' => 'dashboard#saml_login'
   get '/oidc_login(/*path)' => 'dashboard#oidc_login'
 
