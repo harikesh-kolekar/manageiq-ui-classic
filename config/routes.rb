@@ -3313,7 +3313,7 @@ Rails.application.routes.draw do
     }
   end
 
-  root :to => 'dashboard#login'
+  root :to => 'dashboard#login' 
 
   # Let's serve pictures directly from the DB
   get '/pictures/:basename' => 'picture#show', :basename => /[\da-zA-Z]+\.[\da-zA-Z]+/
